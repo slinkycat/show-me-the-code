@@ -1,9 +1,10 @@
-from PIL import Image,ImageDraw
+from PIL import Image,ImageDraw,ImageFont
 
 text = "666"
 
 im = Image.open("test.jpg")
 draw = ImageDraw.Draw(im)
 draw.ellipse((350,50,400,100),fill='red')
-draw.text((375,75),'666',fill='black')
+ft = ImageFont.truetype("C:\\WINDOWS\\Fonts\\SIMYOU.TTF", 20)
+draw.text((370,70),text,font=ft,fill='black')
 im.save("test.jpg")
