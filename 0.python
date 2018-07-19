@@ -1,0 +1,9 @@
+from PIL import Image,ImageDraw
+
+text = "666"
+
+im = Image.open("test.jpg")
+draw = ImageDraw.Draw(im)
+draw.ellipse((350,50,400,100),fill='red')
+draw.text((375,75),'666',fill='black')
+im.save("test.jpg")
