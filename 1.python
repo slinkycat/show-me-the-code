@@ -1,0 +1,18 @@
+import uuid
+
+class test:
+    def __init__(self,num,adress):
+        self.num=num
+        self.adress=adress
+
+    def sort(self):
+        i = 0
+        while(i<self.num):
+            f = open(self.adress,'a+')
+            s = str(i+1)+". "+str(uuid.uuid4())
+            f.write(s+"\n")
+            i+=1
+        f.close()
+
+t=test(200,"num.txt")
+t.sort()
